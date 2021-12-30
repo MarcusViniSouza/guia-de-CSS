@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Fonte nova importado do site google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <title>Conhecendo o CSS</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1>Origem do CSS - Rocketseat!</h1>
+            <h3 id="subtitulo">Discover - O Guia Estelar de CSS</h3>
+        </div>
+
+        <div class="containerTexto" id="subtitulo">
+
+            <div class="containers">
+                <h1>Introdução</h1>
+                <h4>O que significa CSS?</h4>
+
+                <ul>
+                    <li>- Cascading Style Sheet</li>
+                    <li>- Código para criar estilos no HTML</li>
+                    <li>- HTML é a estrutura, e o CSS é a beleza</li>
+                    <li>- Não é uma linguagem de programação</li>
+                    <li>- É uma linguagem style sheet</li>
+                </ul>
+
+                <h2 class="titleExemplo">Exemplo</h2>
+                <p>O primeiro exemplo o style vem de um arquivo separado e lincado atraves da tag
+                    <code>&lt;link&gt;</code>.
+                </p>
+                <p><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code></p>
+                <h2 style="color: burlywood;">Exemplo 2</h1>
+                    <p>
+                        <code> style='color: burlywood;'</code>
+                    </p>
+
+            </div>
+
+            <div class="containers">
+                <h2>Selector ou Seletores</h2>
+
+                <h4>Tipos:</h4>
+                <ul>
+                    <li>- Global selector *</li>
+                    <li>- Element/type selector h1, h2, p, div</li>
+                    <li>- Class selector .red, .m-4</li>
+                    <li>- Attribute selector, Pseudo-class, Pseudo-element, e outros</li>
+                </ul>
+
+                <h2>Origem do CSS</h2>
+                <h4>Adicionando CSS</h4>
+                <ul>
+                    <li>- Inline: Atributo 'Style'</li>
+                    <li>- <code>&lt;style&gt;</code>: Tag HTML que irá conter o CSS</li>
+                    <li>- <code>&lt;link&gt;</code>: Arquivo CSS Externo</li>
+                    <li>- @import: Arquivo CSS Externo</li>
+                </ul>
+
+                <h2>A Cascata (cascading)</h2>
+                <p>A escolha do browser de qual regra aplicar, caso haja muitas regras para o mesmo elemento</p>
+            </div>
+
+            <div class="containers">
+                <h4>Seu estilo é lido de cima para baixo</h4>
+                <p>É levando em consideração 3 fatores:</p>
+                <ol>
+                    <li>- Origem do estilo</li>
+                    <li>- Especificidade</li>
+                    <li>- Importância</li>
+                </ol>
+
+                <h2>Origem do Estilo</h2>
+                <p>inline &gt; tag <code>style</code> &gt; tag <code>link</code></p>
+
+                <h2>Especificidade</h2>
+                <p>É um calculo matemático, onde, cada tipo de seletor e origem do estilo,
+                    possuem valores a serem considerados.
+                </p>
+
+                <ul>
+                    <li>0. Universal selector, combinators e negation pseudo-class <code>(:not())</code></li>
+                    <li>1. Element type selector e pseudo-elements <code>(::before, ::after)</code></li>
+                    <li>10. Classes e attribute selectors <code>([type="radio"]])</code></li>
+                    <li>100. ID selector</li>
+                    <li>1000. Inline</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="containerTexto" id="subtitulo">
+
+            <div class="containers">
+                <h2>A regra <code>!import</code></h2>
+                <ul>
+                    <li>- Cuidado, evite o uso</li>
+                    <li>- Não é considerado uma boa prática</li>
+                    <li>- Quebrar o fluxo natural da cascata</li>
+                </ul>
+
+                <h4>Exemplo</h4>
+                <p>
+                    <code>h1 
+                {
+                    color: blue !important;
+                }
+                </code>
+                </p>
+                <h2>At-rules</h2>
+                <ul>
+                    <li>- Está relacionado ao comportamento do CSS</li>
+                    <li>- Começa com o sinal de '@' seguido do identificador e valor</li>
+                </ul>
+
+                <h4>Exemplos comuns</h4>
+                <p>
+                    - <code>@import</code> Incluir um CSS Externo <br>
+                    - <code>@media</code> Regras condicionais para dispositivos <br>
+                    - <code>@font-face</code> Fontes externas <br>
+                    - <code>@keyframes</code> Animation
+                </p>
+
+                <h4>CSS</h4>
+                <p>
+                    <code>@import</code> 'http://local.com/styles.css'; <br>
+                    <code>@media (min-width: 500px){ /*rules here*/ }</code>
+                    <code>@font-face { /*rules here */ }</code>
+                    <code>@keyframes nameofanimation { /* rules here */ }</code>
+                </p>
+            </div>
+
+            <div class="containers">
+                <h2>Shorthand</h2>
+                <ul>
+                    <li>- Junção de propriedades</li>
+                    <li>- Resumido</li>
+                    <li>- Legível</li>
+                </ul>
+
+                <h4>CSS</h4>
+                <p>
+                    <code>
+                            /* Background properties */ <br>
+                               background-color: #000; <br>
+                               background-image: url(images/img.gif); <br>
+                               background-repeat: no-repeat; <br>
+                               background-position: left top; <br>
+                           
+                            <br>
+        
+                            /* Backgroud shorthand */ <br>
+                              backgroud: #000 url(images/img.gif) no-repeat left top; <br>
+
+                            <br>
+
+                            /* Font properties */ <br>
+                            font-style: italic; <br>
+                            font-weight: bold; <br>
+                            font-size: .8em; <br>
+                            line-height: 1.2; <br>
+                            font-family: Arial, sans-serif;  <br>
+
+                            <br>
+
+                            /* Font shorthand */ <br>
+                            font: italic bold .8em/1.2 Arial, sans-serif;
+                    </code>
+
+                <h3>Detalhes</h3>
+                <ul>
+                    <li>- Não irá considerar propreidades anteriores</li>
+                    <li>- Valores ão especificados iram assumir o valor padrão</li>
+                    <li>- Geralemente, a ordem descrita não importa, mas, se houver muitas propriedades com valores
+                        semelhantes, podemos encontrar problemas</li>
+                </ul>
+                </p>
+            </div>
+
+            <div class="containers">
+                <h3>Propriedades que aceitam shorthand</h3>
+                <p>
+                    <code>
+                    animation, backgroud, border, border-bottom, border-color, <br>
+                    border-left, border-radius, border-right, border-style, <br>
+                    border-top, border-width, column-rule, columns, flex, <br>
+                    flex-flow, font, grid, grid-area, grid-column, grid-row, <br>
+                    grid-template, list-style, margin, offset, outline, <br> 
+                    overflow, padding, place-content, place-items, place-self, <br>
+                    text-decoration, transition
+                </code>
+                    <br><br>
+
+                    <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Shorthand_properties">Saiba mais</a>
+                </p>
+
+                <h2>Funções</h2>
+                <ul>
+                    <li>- Nome seguido de abre e fecha parentesis</li>
+                    <li>- Recebe argumentos</li>
+                </ul>
+
+                <h3>Exemplo</h3>
+                <h4>CSS</h4>
+                <p>
+                    <code>
+                     @import url('https://app.rocketseat.com.br/');
+
+                     <br>
+                     
+                     {<br>
+                       color: rgb(255,0,100); <br>
+                       width: calc(100% - 10px); <br>
+                     }
+                    </code>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="containerVendor">
+            <h2>Vendor Prefixes</h2>
+            <ul>
+                <li>- Permite que browser adicione 'features'</li>
+                <li>- A fim de colocar em uso alguma novidade que vemos no CSS</li>
+            </ul>
+
+            <h4>CSS</h4>
+            <p>
+                <code>
+                    p {<br>
+                        -webkit0background-clip: text; /* Chrome, Safari, ios e Android */ <br>
+                        -moz-background-clip: text; /* Mozilla (Firefox) */ <br>
+                        -ms-background-clip: text; /* Internet Explorer */ <br>
+                        -o-background-clip: text; /* Opera */ <br>
+                    }
+                </code>
+            </p>
+
+            <h4>Consultar</h4>
+            <p>Use esses sites como busca para os prefixes</p>
+            <br>
+            <ul>
+                <li>Acesse: <a href="http://ireade.github.io/which-vendor-prefix/">Which Vendor Prefix</a></li>
+                <li>Acesse: <a href="https://caniuse.com/">Caniuse</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+<footer>
+    Criado por Marcus Vinicius seguindo a aulas do Mayk Brito da Rocketseat
+</footer>
+
+</html>
